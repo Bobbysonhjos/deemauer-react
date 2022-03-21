@@ -9,9 +9,10 @@ const DiscographyCard = ({ record }) => {
         <article className='discograpy-card'>
             <div className="discography-image-container">
                 <img className='discograpy-image' src={image} alt={title} />
-                <p className='discography-release-year'>{release}</p>
+
             </div>
             <h2 className='discograpy-title'>{title}</h2>
+            <p className='discography-release-year'>{release}</p>
             <p>{songs}</p>
         </article>
     )
