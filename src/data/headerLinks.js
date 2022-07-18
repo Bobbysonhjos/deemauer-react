@@ -1,6 +1,6 @@
 const headerLinks = [
     {
-        title: "Home",
+        title: "News",
         link: "/"
     },
     {

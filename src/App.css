@@ -6,30 +6,34 @@
   box-sizing: border-box;
 }
 
-
-
-:root{
-  --background-color: white; 
-  --header-text-color:white;
-  --footer-text-color:#eee;
-  --secondary-color: #eee;
-  --cta-color:rgb(219, 11, 11);
-  --box-shadow:2px 2px 2px lightgray;
-  --text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
-  --active-color: white ;
-  --text-shadow: rgb(7, 7, 7);
-
-  --header-height: 80px;
-  --body-height: calc( 100vh - var(--header-height));
+@font-face {
+  font-family: DeeMauer;
+  src: url("../public/SacredBridge/OTF/Sacred\ Bridge.otf");
 }
 
 
-body{
+:root {
+  --background-color: white;
+  --header-text-color: white;
+  --footer-text-color: #eee;
+  --secondary-color: #eee;
+  --cta-color: rgb(219, 11, 11);
+  --box-shadow: 2px 2px 2px lightgray;
+  --text-shadow: 4px 4px 0 rgba(0, 0, 0, 0.2);
+  --active-color: white;
+  --text-shadow: rgb(7, 7, 7);
+
+  --header-height: 80px;
+  --body-height: calc(100vh - var(--header-height));
+}
+
+
+body {
   background-color: var(--background-color);
   font-family: 'Lato', sans-serif;
 }
 
-.siteheader{
+.siteheader {
   position: sticky;
   top: 0;
   width: 100%;
@@ -44,61 +48,72 @@ body{
   color: var(--header-text-color);
   font-weight: 700;
 }
-.navmenu{
+
+.navmenu {
   display: block;
 }
-.navmenu ul{
-  display:flex;
+
+.navmenu ul {
+  display: flex;
   list-style: none;
   gap: 45px;
 }
 
-.navicons{
+.navicons {
   position: absolute;
   z-index: 20;
   top: 25px;
   right: 5px;
-  display:none;
+  display: none;
   list-style: none;
   gap: 5px;
 }
 
 
-.headeranchor{
+.headeranchor {
   padding: 4px 2px;
   color: white;
   text-decoration: none;
 }
 
-.navicons__headeranchor{
+.navicons__headeranchor {
   padding: 4px 10px;
   border-radius: 8px;
-  font-size:26px;
+  font-size: 26px;
   color: var(--secondary-color);
 }
 
-.headeranchor:hover{
+.headeranchor:hover {
   color: var(--active-color);
-  border-bottom: 2px solid var(--active-color) ;
+  border-bottom: 2px solid var(--active-color);
 }
 
-.logo{
+.logo {
   position: relative;
   display: inline;
   color: #eee;
-  font-family: "Sacred Bridge Demo", sans-serif;
+  font-family: "DeeMauer", sans-serif;
   font-size: 2em;
   font-weight: lighter;
   margin: 0 0 1em 30%;
   width: 100px;
-  font-size:35px;
+  font-size: 35px;
   margin-left: 5px;
 }
+
 @keyframes dee {
-  from {opacity:0.0; left: -40px;}
-  to {opacity:1.0; left: 0;}
+  from {
+    opacity: 0.0;
+    left: -40px;
+  }
+
+  to {
+    opacity: 1.0;
+    left: 0;
+  }
 }
-.logo .dee{
+
+.logo .dee {
   position: absolute;
   top: -22px;
   animation-name: dee;
@@ -107,12 +122,20 @@ body{
   animation-iteration-count: 1;
   animation-fill-mode: backwards;
 }
+
 @keyframes mauer {
-  from {opacity:0.0; left: 200px;}
-  to {opacity:1.0; left: 12px;}
+  from {
+    opacity: 0.0;
+    left: 200px;
+  }
+
+  to {
+    opacity: 1.0;
+    left: 12px;
+  }
 }
 
-.logo .mauer{
+.logo .mauer {
   position: absolute;
   top: 30px;
   left: 12px;
@@ -124,26 +147,26 @@ body{
 }
 
 
-.active{
+.active {
   color: var(--active-color) !important;
-  border-bottom: 2px solid var(--active-color) ;
+  border-bottom: 2px solid var(--active-color);
 }
 
-body{
+body {
   overflow-y: scroll;
-  background: url('../public/images/background-two.webp');
+  background: url('/public/images/Dee\ Mauer\ band\ bild\ \ \(1\).jpg');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
   min-height: var(---body-height);
-  color:rgb(255, 255, 255);
+  color: rgb(255, 255, 255);
   user-select: none;
-  
+
   /* display:flex; */
   align-items: center;
-} 
+}
 
-.page-title{
+.page-title {
   font-family: "Sacred Bridge Demo", sans-serif;
   font-size: 52px;
   color: white;
@@ -151,11 +174,12 @@ body{
   max-width: fit-content;
   margin: 10px auto 60px;
   text-shadow: -1px 1px 0 var(--text-shadow),
-  1px 1px 0 var(--text-shadow),
- 1px -1px 0 var(--text-shadow),
--1px -1px 0 var(--text-shadow);
+    1px 1px 0 var(--text-shadow),
+    1px -1px 0 var(--text-shadow),
+    -1px -1px 0 var(--text-shadow);
 }
-.pagenotfound{
+
+.pagenotfound {
   display: flex;
   justify-content: center;
   margin: 100px 0 50px 0;
@@ -165,7 +189,7 @@ body{
 }
 
 /* DISCOGRAPHY CARDS */
-.discography-container{
+.discography-container {
   max-width: 1000px;
   margin: 0 auto;
   display: flex;
@@ -175,7 +199,7 @@ body{
   gap: 80px;
 }
 
-.discograpy-card{
+.discograpy-card {
   /* position: relative; */
   display: flex;
   flex-direction: column;
@@ -183,68 +207,71 @@ body{
   transition: all ease .1s;
 }
 
-.discography-image-container{
+.discography-image-container {
   width: 200px;
   height: 200px;
 }
 
-.discograpy-image{
+.discograpy-image {
   width: 100%;
   height: 100%;
 }
 
-.discography-release-year{
-/* position:absolute; */
-/* bottom: 8px;
+.discography-release-year {
+  /* position:absolute; */
+  /* bottom: 8px;
 right: 16px; */
 }
+
 .discograpy-card:hover {
   transform: scale(1.2);
 }
 
 
-.hamburger-icons{
+.hamburger-icons {
   list-style: none;
   display: none;
 }
 
-.icons{
+.icons {
   margin-right: 20px;
   display: flex;
   gap: 20px;
   font-size: 30px;
   align-items: center;
-  
+
 }
 
-.icons .icon{
+.icons .icon {
   height: 30px;
   transition: transform ease 0.1s;
 }
 
-.icons .icon:hover{
+.icons .icon:hover {
   transform: scale(1.2);
 }
- 
-.instagram{
-height: 27px !important;
+
+.instagram {
+  height: 27px !important;
 }
 
-.bxl-spotify{
-color: #1DB954;
+.bxl-spotify {
+  color: #1DB954;
 }
-.homepage{
+
+.homepage {
   display: flex;
   flex-direction: column;
 }
+
 .homepage iframe {
   margin: 10px auto;
-  width:560px; 
-  height:315px;
+  width: 560px;
+  height: 315px;
 }
 
 
-.about-text{
+.about-text {
   background-color: rgba(0, 0, 0, 0.74);
   border-radius: 40px 10px 40px 10px;
   max-width: 600px;
@@ -252,69 +279,76 @@ color: #1DB954;
   padding: 20px;
 }
 
-.display-nav{
+.display-nav {
   display: block !important;
 }
 
-@media only screen and (max-width:900px){
-.navmenu{
-  display: none;
-  position: fixed;
-  padding:100px 0 0 50px;
-  width: 100vw;
-  height: 100vh;
-  z-index: 2;
-  line-height: 30px;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  background-color:#000000d0;
-}
-.headeranchor:hover{
-  color: rgb(235, 231, 8);
-  border-bottom: none;
-}
-.active{
-  color: rgb(235, 231, 8) !important;
-  border-bottom: none;
-}
-.navmenu ul {
-  display: flex;
-  flex-direction: column;
+@media only screen and (max-width:900px) {
+  .navmenu {
+    display: none;
+    position: fixed;
+    padding: 100px 0 0 50px;
+    width: 100vw;
+    height: 100vh;
+    z-index: 2;
+    line-height: 30px;
+    top: 0;
+    left: 0;
+    overflow: hidden;
+    background-color: #000000d0;
+  }
+
+  .headeranchor:hover {
+    color: rgb(235, 231, 8);
+    border-bottom: none;
+  }
+
+  .active {
+    color: rgb(235, 231, 8) !important;
+    border-bottom: none;
+  }
+
+  .navmenu ul {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .navmenu ul a {
+    width: fit-content;
+  }
+
+  .navicons {
+    display: block;
+  }
+
+  .page-title {
+    font-size: 42px;
+
+  }
+
 }
 
-.navmenu ul a {
-  width: fit-content;
-}
-.navicons{
-  display: block;
-}
-.page-title{
-  font-size: 42px;
 
-}
-
-}
-
-
-@media only screen and (max-width:600px){
-  .page-title{
+@media only screen and (max-width:600px) {
+  .page-title {
     font-size: 26px;
   }
+
   .homepage iframe {
     margin: 10px auto;
-    width:360px; 
-    height:215px;
+    width: 360px;
+    height: 215px;
   }
 }
 
-@media only screen and (max-width:400px){
-.icons{
-  display: none;
-}
-.homepage iframe {
-  margin: 10px auto;
-  width:90%; 
-  height:180px;
-}
+@media only screen and (max-width:400px) {
+  .icons {
+    display: none;
+  }
+
+  .homepage iframe {
+    margin: 10px auto;
+    width: 90%;
+    height: 180px;
+  }
 }

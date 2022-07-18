@@ -4,7 +4,7 @@ import Header from "./components/Header";
 import Discography from "./components/Discography";
 import PageNotFound from "./components/PageNotFound";
 import About from "./components/About";
-import Home from "./components/Home";
+import News from "./components/News";
 import Members from "./components/Members";
 
 function App() {
@@ -13,7 +13,7 @@ function App() {
       <Header />
       <main>
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<News />} />
           <Route path="/about" element={<About />} />
           <Route path="/discography" element={<Discography />} />
           <Route path="/members" element={<Members />} />
